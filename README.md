@@ -22,3 +22,7 @@ Bonus
 
 ## Tools
 This project was bootstrapped with [NextJS Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) which provides a production ready setup for the app. There are some features (auth, crash analytics, etc.) I don't intend to use though.
+
+## Tech-debt (if it was a real project)
+- No deployment pipeline
+- No tests
