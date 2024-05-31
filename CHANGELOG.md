@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/fajtaiandris/stock-watcher/compare/v1.0.0...v1.1.0) (2024-05-31)
+
+
+### Features
+
+* basic stock page layout ([fe8f1d8](https://github.com/fajtaiandris/stock-watcher/commit/fe8f1d81110815a54dac4840e11356dedd35b3ca))
+
 # 1.0.0 (2024-05-31)
 
 
