@@ -8,7 +8,8 @@
   },
   "StockPage": {
     "meta_title": "Stock Page",
-    "meta_description": "Description"
+    "meta_description": "Description",
+    "error_message": "Error loading stock data"
   },
   "Stats": {
     "price": "Price"
