@@ -17,7 +17,7 @@ export default function Layout(props: { children: React.ReactNode }) {
           />
         </div>
       </div>
-      {props.children}
+      <div className="container mx-auto p-4">{props.children}</div>
     </div>
   );
 }
