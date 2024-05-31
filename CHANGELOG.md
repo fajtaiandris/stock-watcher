@@ -4,6 +4,15 @@
 ### Features
 
 * basic stock page layout ([fe8f1d8](https://github.com/fajtaiandris/stock-watcher/commit/fe8f1d81110815a54dac4840e11356dedd35b3ca))
+* fetch stock data ([c13d21b](https://github.com/fajtaiandris/stock-watcher/commit/c13d21bad09c0a47e8757e949f14a9dadde05be7))
+* primitive network error handling ([2fcab83](https://github.com/fajtaiandris/stock-watcher/commit/2fcab83465124307fec6099c76fcfc16b23986a6))
+
+# [1.1.0](https://github.com/fajtaiandris/stock-watcher/compare/v1.0.0...v1.1.0) (2024-05-31)
+
+
+### Features
+
+* basic stock page layout ([fe8f1d8](https://github.com/fajtaiandris/stock-watcher/commit/fe8f1d81110815a54dac4840e11356dedd35b3ca))
 
 # [1.1.0](https://github.com/fajtaiandris/stock-watcher/compare/v1.0.0...v1.1.0) (2024-05-31)
 
