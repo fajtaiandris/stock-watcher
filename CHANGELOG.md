@@ -1,3 +1,10 @@
+# 1.0.0 (2024-05-31)
+
+
+### Features
+
+* add daisy UI and implement navbar ([d7b936d](https://github.com/fajtaiandris/stock-watcher/commit/d7b936dc749f527a07a1f5a917d412d66685c1f8))
+
 # [3.51.0](https://github.com/ixartz/Next-js-Boilerplate/compare/v3.50.1...v3.51.0) (2024-05-29)
 
 
