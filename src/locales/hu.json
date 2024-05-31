@@ -1,5 +1,16 @@
 {
+  "Index": {
+    "meta_title": "Részvényfigyelő",
+    "meta_description": "Böngésszen részvényeket és egyebeket"
+  },
   "RootLayout": {
-    "stock_watcher": "Reszveny Nezegeto"
+    "stock_watcher": "Részvényfigyelő"
+  },
+  "StockPage": {
+    "meta_title": "Részvényoldal",
+    "meta_description": "Leírás"
+  },
+  "Stats": {
+    "price": "Ár"
   }
 }

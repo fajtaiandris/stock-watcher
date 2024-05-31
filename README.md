@@ -30,3 +30,6 @@ This project was bootstrapped with [NextJS Boilerplate](https://github.com/ixart
 ## Extras
 - Localization (en and hu)
 - Dark theme
+- Error pages / error handling
+- Versioning
+- Proper number handling (eg BigJS)
