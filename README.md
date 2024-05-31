@@ -26,3 +26,7 @@ This project was bootstrapped with [NextJS Boilerplate](https://github.com/ixart
 ## Tech-debt (if it was a real project)
 - No deployment pipeline
 - No tests
+
+## Extras
+- Localization (en and hu)
+- Dark theme
