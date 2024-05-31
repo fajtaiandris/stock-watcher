@@ -29,6 +29,7 @@ This project was bootstrapped with [NextJS Boilerplate](https://github.com/ixart
 - Error pages / error handling
 - Versioning
 - Proper number handling (eg BigJS)
+- Secret envs in the repo
 
 ## Extras
 - Localization (en and hu)
