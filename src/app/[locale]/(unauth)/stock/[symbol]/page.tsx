@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { PriceChart } from '@/components/PriceChart';
 import { PerformanceStat } from '@/components/stats/PerformanceStat';
 import { PlaceholderStat } from '@/components/stats/PlaceholderStat';
-import { getStockData } from '@/libs/alphavantage';
+import { getStockData } from '@/libs/alphavantage/get';
 
 type IStockPageProps = {
   params: { symbol: string; locale: string };
