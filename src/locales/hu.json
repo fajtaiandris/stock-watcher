@@ -8,9 +8,15 @@
   },
   "StockPage": {
     "meta_title": "Részvényoldal",
-    "meta_description": "Leírás"
+    "meta_description": "Leírás",
+    "error_message": "Valami hiba történt"
   },
   "Stats": {
     "price": "Ár"
+  },
+  "Search": {
+    "search_placeholder": "Keresés",
+    "type_something": "Írjon valamit",
+    "no_results": "Nincs találat"
   }
 }
