@@ -81,7 +81,7 @@ export const StockMatchSchema = z.object({
   '4. region': z.string(),
   '5. marketOpen': z.string(),
   '6. marketClose': z.string(),
-  '7, timezone': z.string(),
+  '7. timezone': z.string(),
   '8. currency': z.string(),
   '9. matchScore': z.string(),
 });

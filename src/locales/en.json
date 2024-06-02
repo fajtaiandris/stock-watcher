@@ -9,9 +9,14 @@
   "StockPage": {
     "meta_title": "Stock Page",
     "meta_description": "Description",
-    "error_message": "Error loading stock data"
+    "error_message": "Something went wrong"
   },
   "Stats": {
     "price": "Price"
+  },
+  "Search": {
+    "search_placeholder": "Search",
+    "type_something": "Type something",
+    "no_results": "No results found"
   }
 }
