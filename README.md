@@ -34,3 +34,5 @@ This project was bootstrapped with [NextJS Boilerplate](https://github.com/ixart
 ## Extras
 - Localization (en and hu)
 - Dark theme
+
+Note: The API is limited to 25 requests/day.
