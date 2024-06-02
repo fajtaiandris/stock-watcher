@@ -14,10 +14,10 @@ This app was made for a technical interview.
  - The code should be hosted on a public Git repository, such as GitHub. Try to maintain a clear and concise commit history.
 
 Bonus
- - NextJS SSR.
+ - ✅ NextJS SSR.
  - The search view should include a stock suggestion feature that displays a list of suggested stocks as the user types.
- - Add a chart to the detail view that shows the stock's price history over time.
- - Implement a caching mechanism to improve performance and reduce the number of API requests.
+ - ✅ Add a chart to the detail view that shows the stock's price history over time.
+ - ✅ Implement a caching mechanism to improve performance and reduce the number of API requests.
  - Add a feature that allows users to save their favourite stocks and view them in a separate view.
 
 ## Tools

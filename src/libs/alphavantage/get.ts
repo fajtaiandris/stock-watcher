@@ -25,6 +25,8 @@ const get = async <T>(
   }
   const response = await fetch(
     `${ALPHAVANTAGE_BASE_URL}?${new URLSearchParams({ ...params, apikey: ALPHAVANTAGE_API_KEY })}`,
+    // revalidate at most every hour
+    { cache: 'force-cache', next: { revalidate: 3600 } },
   );
   const data = await response.json();
   if (data?.Information === EXPIRED_TOKEN_API_RESPONSE) {
