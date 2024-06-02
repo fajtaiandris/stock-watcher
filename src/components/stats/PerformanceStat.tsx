@@ -18,13 +18,15 @@ export const PerformanceStat: React.FC<Props> = ({
   const t = useTranslations('Stats');
   const isLoss = Number(valueChange) < 0;
   return (
-    <div className="stat shadow">
-      <div className="stat-title">{t('price')}</div>
-      <div className="stat-value">{formatCurrency(value, currency)}</div>
-      <div className="stat-desc">
-        {isLoss ? '↘' : '↗︎'} {formatCurrency(valueChange, currency)}
-        {' ('}
-        {formatPercentage(percentChange)})
+    <div className="stats shadow">
+      <div className="stat">
+        <div className="stat-title">{t('price')}</div>
+        <div className="stat-value">{formatCurrency(value, currency)}</div>
+        <div className="stat-desc">
+          {isLoss ? '↘' : '↗︎'} {formatCurrency(valueChange, currency)}
+          {' ('}
+          {formatPercentage(percentChange)})
+        </div>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ export const StockList: React.FC<{
   }
   return stocks.map((stock) => (
     <Link key={stock['1. symbol']} href={`/stock/${stock['1. symbol']}`}>
-      <div className="stats w-full shadow">
+      <div className="stats w-full shadow transition-all hover:translate-x-10">
         <div className="stat">
           <div className="stat-title">{stock['1. symbol']}</div>
           <div className="stat-value">{stock['2. name']}</div>
