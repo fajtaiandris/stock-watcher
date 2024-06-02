@@ -30,7 +30,9 @@ const StockPage = async ({ params: { symbol } }: IStockPageProps) => {
           {data.overview.Name} ({data.overview.Symbol})
         </h1>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-          <PriceChart />
+          <div className="col-span-2 row-span-2 min-h-[200px]">
+            <PriceChart data={data.chartData} />
+          </div>
           <PerformanceStat
             value={data.quote['Global Quote']['05. price']}
             valueChange={data.quote['Global Quote']['09. change']}

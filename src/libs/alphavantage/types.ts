@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const OverviewResponseSchema = z.object({
+export const overviewResponseSchema = z.object({
   Symbol: z.string(),
   AssetType: z.string(),
   Name: z.string(),
@@ -54,7 +54,7 @@ export const OverviewResponseSchema = z.object({
   ExDividendDate: z.string(),
 });
 
-export const GlobalQuoteResponseSchema = z.object({
+export const globalQuoteResponseSchema = z.object({
   'Global Quote': z.object({
     '01. symbol': z.string(),
     '02. open': z.string(),
@@ -69,12 +69,7 @@ export const GlobalQuoteResponseSchema = z.object({
   }),
 });
 
-export const StockDataSchema = z.object({
-  overview: OverviewResponseSchema,
-  quote: GlobalQuoteResponseSchema,
-});
-
-export const StockMatchSchema = z.object({
+export const stockMatchSchema = z.object({
   '1. symbol': z.string(),
   '2. name': z.string(),
   '3. type': z.string(),
@@ -86,6 +81,35 @@ export const StockMatchSchema = z.object({
   '9. matchScore': z.string(),
 });
 
-export const StockSearchResultSchema = z.object({
-  bestMatches: z.array(StockMatchSchema),
+export const stockSearchResultSchema = z.object({
+  bestMatches: z.array(stockMatchSchema),
+});
+
+const metaDataSchema = z.object({
+  '1. Information': z.string(),
+  '2. Symbol': z.string(),
+  '3. Last Refreshed': z.string(),
+  '4. Output Size': z.string(),
+  '5. Time Zone': z.string(),
+});
+
+export const dailyDataSchema = z.object({
+  '1. open': z.string(),
+  '2. high': z.string(),
+  '3. low': z.string(),
+  '4. close': z.string(),
+  '5. volume': z.string(),
+});
+
+const timeSeriesSchema = z.record(z.string(), dailyDataSchema);
+
+export const timeSeriesDailyResponseSchema = z.object({
+  'Meta Data': metaDataSchema,
+  'Time Series (Daily)': timeSeriesSchema,
+});
+
+export const stockPageDataSchema = z.object({
+  overview: overviewResponseSchema,
+  quote: globalQuoteResponseSchema,
+  chartData: timeSeriesDailyResponseSchema,
 });

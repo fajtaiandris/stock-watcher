@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import type { z } from 'zod';
 
-import type { StockMatchSchema } from '@/libs/alphavantage/types';
+import type { stockMatchSchema } from '@/libs/alphavantage/types';
 
 import { InfoAlert } from './InfoAlert';
 
 export const StockList: React.FC<{
-  stocks: z.infer<typeof StockMatchSchema>[];
+  stocks: z.infer<typeof stockMatchSchema>[];
 }> = ({ stocks }) => {
   const t = useTranslations('Search');
   if (!stocks.length) {

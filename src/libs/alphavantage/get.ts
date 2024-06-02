@@ -4,10 +4,11 @@ import type { z } from 'zod';
 
 import { mockStockData, mockStockSearchResult } from './mocks';
 import {
-  GlobalQuoteResponseSchema,
-  OverviewResponseSchema,
-  type StockDataSchema,
-  StockSearchResultSchema,
+  globalQuoteResponseSchema,
+  overviewResponseSchema,
+  type stockPageDataSchema,
+  stockSearchResultSchema,
+  timeSeriesDailyResponseSchema,
 } from './types';
 
 const { ALPHAVANTAGE_API_KEY, ALPHAVANTAGE_BASE_URL } = process.env;
@@ -39,29 +40,37 @@ const get = async <T>(
 
 export const getStockData = async (
   symbol: string,
-): Promise<z.infer<typeof StockDataSchema>> => {
+): Promise<z.infer<typeof stockPageDataSchema>> => {
   if (process.env.NODE_ENV === 'development') {
     return mockStockData;
   }
-  const [overview, quote] = await Promise.all([
-    get({ function: 'OVERVIEW', symbol }, OverviewResponseSchema),
+  const [overview, quote, chartData] = await Promise.all([
+    get({ function: 'OVERVIEW', symbol }, overviewResponseSchema),
     get(
       {
         function: 'GLOBAL_QUOTE',
         symbol,
       },
-      GlobalQuoteResponseSchema,
+      globalQuoteResponseSchema,
+    ),
+    get(
+      {
+        function: 'TIME_SERIES_DAILY',
+        symbol,
+      },
+      timeSeriesDailyResponseSchema,
     ),
   ]);
   return {
     overview,
     quote,
+    chartData,
   };
 };
 
 export const getBestMatches = async (
   query: string,
-): Promise<z.infer<typeof StockSearchResultSchema>> => {
+): Promise<z.infer<typeof stockSearchResultSchema>> => {
   if (process.env.NODE_ENV === 'development') {
     return mockStockSearchResult;
   }
@@ -70,6 +79,6 @@ export const getBestMatches = async (
       function: 'SYMBOL_SEARCH',
       keywords: query,
     },
-    StockSearchResultSchema,
+    stockSearchResultSchema,
   );
 };

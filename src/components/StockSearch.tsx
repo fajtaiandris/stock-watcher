@@ -6,14 +6,14 @@ import type { z } from 'zod';
 
 import { getBestMatches } from '@/libs/alphavantage/get';
 import { mockStockSearchResult } from '@/libs/alphavantage/mocks';
-import type { StockMatchSchema } from '@/libs/alphavantage/types';
+import type { stockMatchSchema } from '@/libs/alphavantage/types';
 
 import { InfoAlert } from './InfoAlert';
 import { StockList } from './StockList';
 
 const StockSearch: React.FC = () => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<z.infer<typeof StockMatchSchema>[]>(
+  const [results, setResults] = useState<z.infer<typeof stockMatchSchema>[]>(
     mockStockSearchResult.bestMatches,
   );
   const t = useTranslations('Search');
