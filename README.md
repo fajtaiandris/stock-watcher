@@ -27,7 +27,6 @@ This project was bootstrapped with [NextJS Boilerplate](https://github.com/ixart
 - No deployment pipeline
 - No tests
 - Error pages / error handling
-- Versioning
 - Proper number handling (eg BigJS)
 - Secret envs in the repo
 - Mocks set up in a primitive way (could be done with MSW)
