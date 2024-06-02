@@ -20,6 +20,28 @@
 * stock search api integration ([f6e6e28](https://github.com/fajtaiandris/stock-watcher/commit/f6e6e28c615ec291166aed2f68015696892c7960))
 * styling ([5580716](https://github.com/fajtaiandris/stock-watcher/commit/5580716f3478d45a25c0bde4ed205ba9942f6d62))
 
+# [1.1.0](https://github.com/fajtaiandris/stock-watcher/compare/v1.0.0...v1.1.0) (2024-06-02)
+
+
+### Bug Fixes
+
+* cache ([9a7d063](https://github.com/fajtaiandris/stock-watcher/commit/9a7d063d7c33ac9316edc63ac3bf62213821ea64))
+
+
+### Features
+
+* add more stock details ([e40468a](https://github.com/fajtaiandris/stock-watcher/commit/e40468aed7038f0c55809465838edd5ae7d5dcb5))
+* basic stock page layout ([fe8f1d8](https://github.com/fajtaiandris/stock-watcher/commit/fe8f1d81110815a54dac4840e11356dedd35b3ca))
+* caching API calls ([c619b95](https://github.com/fajtaiandris/stock-watcher/commit/c619b955c5fb5414d4c8ffee060b2b694e2682eb))
+* fetch stock data ([c13d21b](https://github.com/fajtaiandris/stock-watcher/commit/c13d21bad09c0a47e8757e949f14a9dadde05be7))
+* mock api responses ([50843cf](https://github.com/fajtaiandris/stock-watcher/commit/50843cfa8898a8c7ba7d75822f9490cc792b9ed8))
+* navbar styling ([fbddd2d](https://github.com/fajtaiandris/stock-watcher/commit/fbddd2d80809b8c72d559ab7c24e8815080c608d))
+* primitive network error handling ([2fcab83](https://github.com/fajtaiandris/stock-watcher/commit/2fcab83465124307fec6099c76fcfc16b23986a6))
+* stock price chart ([620ce04](https://github.com/fajtaiandris/stock-watcher/commit/620ce04aa155fe9011024e4a70befc4a1da12464))
+* stock search ([8ab839f](https://github.com/fajtaiandris/stock-watcher/commit/8ab839f253f45e708bf950200305b3f3e69d5936))
+* stock search api integration ([f6e6e28](https://github.com/fajtaiandris/stock-watcher/commit/f6e6e28c615ec291166aed2f68015696892c7960))
+* styling ([5580716](https://github.com/fajtaiandris/stock-watcher/commit/5580716f3478d45a25c0bde4ed205ba9942f6d62))
+
 # [1.1.0](https://github.com/fajtaiandris/stock-watcher/compare/v1.0.0...v1.1.0) (2024-05-31)
 
 
