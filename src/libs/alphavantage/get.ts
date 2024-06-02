@@ -2,6 +2,7 @@
 
 import type { z } from 'zod';
 
+import { mockStockData, mockStockSearchResult } from './mocks';
 import {
   GlobalQuoteResponseSchema,
   OverviewResponseSchema,
@@ -18,7 +19,6 @@ const get = async <T>(
   params: Record<string, string>,
   schema: z.ZodSchema<T>,
 ): Promise<T> => {
-  console.log(ALPHAVANTAGE_API_KEY);
   if (!ALPHAVANTAGE_API_KEY) {
     throw new Error('ALPHAVANTAGE_API_KEY is not defined');
   }
@@ -40,6 +40,9 @@ const get = async <T>(
 export const getStockData = async (
   symbol: string,
 ): Promise<z.infer<typeof StockDataSchema>> => {
+  if (process.env.NODE_ENV === 'development') {
+    return mockStockData;
+  }
   const [overview, quote] = await Promise.all([
     get({ function: 'OVERVIEW', symbol }, OverviewResponseSchema),
     get(
@@ -59,6 +62,9 @@ export const getStockData = async (
 export const getBestMatches = async (
   query: string,
 ): Promise<z.infer<typeof StockSearchResultSchema>> => {
+  if (process.env.NODE_ENV === 'development') {
+    return mockStockSearchResult;
+  }
   return get(
     {
       function: 'SYMBOL_SEARCH',

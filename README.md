@@ -30,6 +30,7 @@ This project was bootstrapped with [NextJS Boilerplate](https://github.com/ixart
 - Versioning
 - Proper number handling (eg BigJS)
 - Secret envs in the repo
+- Mocks set up in a primitive way (could be done with MSW)
 
 ## Extras
 - Localization (en and hu)
