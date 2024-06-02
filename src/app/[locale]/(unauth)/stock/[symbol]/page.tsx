@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 
 import { PriceChart } from '@/components/PriceChart';
+import { GenericStat } from '@/components/stats/GenericStat';
 import { PerformanceStat } from '@/components/stats/PerformanceStat';
-import { PlaceholderStat } from '@/components/stats/PlaceholderStat';
 import { getStockData } from '@/libs/alphavantage/get';
 
 type IStockPageProps = {
@@ -39,10 +39,36 @@ const StockPage = async ({ params: { symbol } }: IStockPageProps) => {
             percentChange={data.quote['Global Quote']['10. change percent']}
             currency={data.overview.Currency}
           />
-          {Array.from(Array(7).keys()).map((__, i) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <PlaceholderStat key={i} />
-          ))}
+          <GenericStat
+            title="Open"
+            value={data.quote['Global Quote']['02. open']}
+            currency={data.overview.Currency}
+          />
+          <GenericStat
+            title="High"
+            value={data.quote['Global Quote']['03. high']}
+            currency={data.overview.Currency}
+          />
+          <GenericStat
+            title="Low"
+            value={data.quote['Global Quote']['04. low']}
+            currency={data.overview.Currency}
+          />
+          <GenericStat
+            title="Previous Close"
+            value={data.quote['Global Quote']['08. previous close']}
+            currency={data.overview.Currency}
+          />
+          <GenericStat
+            title="Dividend Yield"
+            value={data.overview.DividendYield}
+          />
+          <GenericStat
+            title="EPS"
+            value={data.overview.EPS}
+            currency={data.overview.Currency}
+          />
+          <GenericStat title="PE Ratio" value={data.overview.PERatio} />
         </div>
       </div>
     </div>
