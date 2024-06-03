@@ -1,7 +1,8 @@
 'use client';
 
+import { debounce } from 'lodash';
 import { useTranslations } from 'next-intl';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import type { z } from 'zod';
 
 import { getBestMatches } from '@/libs/alphavantage/get';
@@ -19,6 +20,7 @@ const StockSearch: React.FC = () => {
   const t = useTranslations('Search');
 
   useEffect(() => {
+    if (!query) return;
     const fetchStocks = async () => {
       const matches = await getBestMatches(query);
       setResults(matches.bestMatches ?? []);
@@ -27,9 +29,12 @@ const StockSearch: React.FC = () => {
     fetchStocks();
   }, [query]);
 
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
-  };
+  const handleOnChange = useCallback(
+    debounce((e: React.ChangeEvent<HTMLInputElement>) => {
+      setQuery(e.target.value);
+    }, 300),
+    [],
+  );
 
   return (
     <div className="flex flex-col gap-2">
